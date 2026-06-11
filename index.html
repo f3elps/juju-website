@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para a Juju 💗</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<canvas id="heartsCanvas"></canvas>
+<canvas id="confettiCanvas"></canvas>
+
+<!-- Music -->
+<audio id="bgMusic" loop preload="none"></audio>
+<div id="ytplayer" style="position:fixed;width:0;height:0;overflow:hidden;left:-9999px;top:-9999px;" aria-hidden="true"></div>
+<button class="music-btn" id="musicBtn" aria-label="Tocar música">
+  <span class="disc"></span>
+  <span class="eq"><i></i><i></i><i></i></span>
+  <span id="musicLabel">Tocar nossa música</span>
+</button>
+
+<!-- ============ HERO ============ -->
+<section class="hero" data-screen-label="Abertura">
+  <div id="heroDeco"></div>
+  <div class="hero-inner">
+    <p class="pretitle">feliz dia dos namorados,</p>
+    <h1 class="name">Juju</h1>
+    <p class="sub">um cantinho da internet feito só pra você — pra te lembrar, do começo ao fim, do quanto eu te amo.</p>
+  </div>
+  <div class="scroll-hint">
+    <span>role pra começar</span>
+    <span class="mouse"></span>
+  </div>
+</section>
+
+<!-- ============ CRIANÇAS (antes de nós) ============ -->
+<section class="band blush" data-screen-label="Quando éramos crianças">
+  <div class="wrap center">
+    <p class="eyebrow reveal">muito antes de nós</p>
+    <h2 class="section-title reveal d1">Quem diria que a gente ia <em>se encontrar?</em></h2>
+    <p class="lead reveal d2">Duas crianças, cada uma no seu canto, sem fazer ideia de que um dia seriam o amor da vida uma da outra.</p>
+    <div class="kids">
+      <div class="kid-l reveal">
+        <div class="polaroid">
+          <image-slot id="kid-felipe" style="width:100%;height:300px" shape="rounded" radius="4" placeholder="Eu, criança"></image-slot>
+          <span class="cap">eu, pequeno 👶</span>
+        </div>
+      </div>
+      <div class="kid-heart reveal d1">♥</div>
+      <div class="kid-r reveal d2">
+        <div class="polaroid">
+          <image-slot id="kid-julia" style="width:100%;height:300px" shape="rounded" radius="4" placeholder="A Juju, criança"></image-slot>
+          <span class="cap">a Juju, pequena 🎀</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO NOS CONHECEMOS ============ -->
+<section class="band cream" data-screen-label="Como nos conhecemos">
+  <div class="wrap">
+    <div class="story-grid">
+      <div class="story-copy">
+        <p class="eyebrow reveal">como tudo começou</p>
+        <h2 class="section-title reveal d1">Um <em>match</em> que virou pra sempre</h2>
+        <p class="reveal d2">A gente se conheceu no <strong>Tinder</strong>, numa sexta-feira da primeira semana de julho de 2024. O engraçado é que estudamos no mesmo colégio por um ano e frequentávamos os mesmos lugares — e foi um aplicativo que finalmente nos juntou.</p>
+        <p class="reveal d3">Eu fui te buscar na porta da sua casa. Você entrou no carro, eu te perguntei qual música você queria ouvir, e você disse <strong>Taylor Swift</strong>. Fomos pra um restaurante japonês e, chegando lá, eu não esperei nem 5 minutos pra te beijar — porque eu já sabia que cada minuto a mais era tempo perdido.</p>
+        <div class="quote-card reveal d2">
+          <p>"Eu achei que ele era lindo, que o sorriso dele era perfeito. Eu tive a impressão de que ele era um príncipe."</p>
+          <span class="by">— a Juju, sobre a primeira impressão</span>
+        </div>
+      </div>
+      <div class="reveal-scale d2">
+        <div class="polaroid">
+          <image-slot id="conhecemos-foto" style="width:100%;height:360px" shape="rounded" radius="4" placeholder="Foto do nosso primeiro encontro / início"></image-slot>
+          <span class="cap">o começo de tudo ✨</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LINHA DO TEMPO ============ -->
+<section class="band blush" data-screen-label="Linha do tempo">
+  <div class="wrap center">
+    <p class="eyebrow reveal">nossa história em capítulos</p>
+    <h2 class="section-title reveal d1">A linha do tempo do <em>nós</em></h2>
+    <p class="lead reveal d2">Cada data aqui mudou a minha vida pra melhor.</p>
+
+    <div class="timeline">
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">julho 2024 <span class="tl-emoji">🍣</span></div>
+          <h3 class="tl-head">O primeiro encontro</h3>
+          <p>Te busquei em casa, jantar japonês, Taylor Swift no carro — e aquele beijo que não podia esperar.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">5 de agosto 2024 <span class="tl-emoji">🎂</span></div>
+          <h3 class="tl-head">Seu aniversário</h3>
+          <p>O dia em que conheci os seus amigos. Eu já estava por dentro da sua vida — e amando cada parte dela.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">madrugada, agosto 2024 <span class="tl-emoji">🌙</span></div>
+          <h3 class="tl-head">O primeiro "eu te amo"</h3>
+          <p>Num mirante, de madrugada. Você falou "eu te amo" de brincadeira... e eu respondi de verdade. O resto é história.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">20 de setembro 2024 <span class="tl-emoji">💍</span></div>
+          <h3 class="tl-head">Te pedi em namoro</h3>
+          <p>O dia em que você oficialmente virou a minha namorada — e eu, o homem mais sortudo do mundo.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">31 de outubro 2024 <span class="tl-emoji">🎈</span></div>
+          <h3 class="tl-head">Meu aniversário</h3>
+          <p>O primeiro de muitos ao seu lado. Comemorar a vida fica bem melhor quando é com você.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">17 de maio 2025 <span class="tl-emoji">🐾</span></div>
+          <h3 class="tl-head">Quando mais precisei</h3>
+          <p>No dia mais difícil, quando perdi meu cachorro, você me segurou. Ali eu entendi de novo o tamanho do seu amor.</p>
+        </div>
+      </div>
+      <div class="tl-item reveal">
+        <span class="tl-dot"></span>
+        <div class="tl-card">
+          <div class="tl-date">réveillon 2026 <span class="tl-emoji">🎆</span></div>
+          <h3 class="tl-head">Guarajuba, nosso primeiro ano novo</h3>
+          <p>A virada do ano, juntinhos pela primeira vez. Comecei 2026 com tudo que eu mais quero ao meu lado.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CONTADOR TEMPO JUNTOS ============ -->
+<section class="band cream" data-screen-label="Tempo juntos">
+  <div class="wrap center">
+    <p class="eyebrow reveal">e o relógio não para</p>
+    <h2 class="section-title reveal d1">Há quanto tempo somos <em>nós</em></h2>
+    <div class="counter-hero reveal-scale d1">
+      <div class="count-row">
+        <div class="count-cell"><div class="count-num" id="cDays">0</div><div class="count-lab">dias</div></div>
+        <div class="count-cell"><div class="count-num" id="cHours">00</div><div class="count-lab">horas</div></div>
+        <div class="count-cell"><div class="count-num" id="cMin">00</div><div class="count-lab">minutos</div></div>
+        <div class="count-cell"><div class="count-num" id="cSec">00</div><div class="count-lab">segundos</div></div>
+      </div>
+      <p class="count-since">...desde 20 de setembro de 2024, e contando pra sempre 💗</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA NÓS DOIS ============ -->
+<section class="band blush" data-screen-label="Galeria nós dois">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow reveal">nós dois</p>
+      <h2 class="section-title reveal d1">Cada foto, um <em>te amo</em></h2>
+      <p class="lead reveal d2">Passa o mouse, escolhe a favorita... eu já sei que toda foto com você é a minha preferida.</p>
+    </div>
+    <div class="gallery">
+      <div class="gphoto col-6 reveal"><image-slot id="nos-1" style="width:100%;height:420px" placeholder="Foto nossa 1"></image-slot><span class="tag">nós dois 💕</span></div>
+      <div class="gphoto col-6 reveal d1"><image-slot id="nos-2" style="width:100%;height:420px" placeholder="Foto nossa 2"></image-slot><span class="tag">meu amor</span></div>
+      <div class="gphoto col-4 reveal"><image-slot id="nos-3" style="width:100%;height:300px" placeholder="Foto nossa 3"></image-slot><span class="tag">tchutchuquinha</span></div>
+      <div class="gphoto col-4 reveal d1"><image-slot id="nos-4" style="width:100%;height:300px" placeholder="Foto nossa 4"></image-slot><span class="tag">princesa</span></div>
+      <div class="gphoto col-4 reveal d2"><image-slot id="nos-5" style="width:100%;height:300px" placeholder="Foto nossa 5"></image-slot><span class="tag">pra sempre</span></div>
+      <div class="gphoto col-5 reveal"><image-slot id="nos-6" style="width:100%;height:340px" placeholder="Foto nossa 6"></image-slot><span class="tag">amor da minha vida</span></div>
+      <div class="gphoto col-7 reveal d1"><image-slot id="nos-7" style="width:100%;height:340px" placeholder="Foto nossa 7"></image-slot><span class="tag">você e eu ✨</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GALERIA AMIGOS ============ -->
+<section class="band cream" data-screen-label="Galeria amigos">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow reveal">a nossa gente</p>
+      <h2 class="section-title reveal d1">As pessoas que <em>a gente ama</em></h2>
+      <p class="lead reveal d2">Conhecer os seus amigos no seu aniversário foi entrar de vez na sua vida. E hoje as nossas famílias e os nossos amigos já se misturam — que sorte a minha.</p>
+    </div>
+    <div class="fam-grid">
+      <div class="fam-card reveal">
+        <image-slot id="people-meus-amigos" placeholder="Eu com os meus amigos"></image-slot>
+        <span class="fam-label">os meus amigos 🍻</span>
+      </div>
+      <div class="fam-card reveal d1">
+        <image-slot id="people-amigos-dela" placeholder="Nós com os amigos da Juju"></image-slot>
+        <span class="fam-label">os seus amigos 🥂</span>
+      </div>
+      <div class="fam-card fam-wide reveal d2">
+        <image-slot id="people-minha-familia" placeholder="Nós com a minha família"></image-slot>
+        <span class="fam-label">a minha família 🏡</span>
+      </div>
+      <div class="fam-card fam-solo reveal d3">
+        <image-slot id="people-familia-dela" placeholder="Nós com a família da Juju"></image-slot>
+        <span class="fam-label">a sua família 💞</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ JOGO DO ATLÉTICO ============ -->
+<section class="band blush" data-screen-label="Jogo do Atlético">
+  <div class="wrap center">
+    <p class="eyebrow reveal">você realizou um sonho meu</p>
+    <h2 class="section-title reveal d1">No jogo do <em>Galo</em>, comigo</h2>
+    <p class="lead reveal d2">Você foi comigo ao jogo do Atlético Mineiro e realizou um sonho meu. São gestos assim — sem precisar de palavras — que mostram o quanto você se importa comigo. 🖤🤍</p>
+    <div class="gallery" style="margin-top:46px">
+      <div class="gphoto col-6 reveal"><image-slot id="atletico-1" style="width:100%;height:380px" placeholder="No jogo do Atlético 1"></image-slot><span class="tag">vamo, Galo! 🖤</span></div>
+      <div class="gphoto col-6 reveal d1"><image-slot id="atletico-2" style="width:100%;height:380px" placeholder="No jogo do Atlético 2"></image-slot><span class="tag">com você na arquibancada</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NOSSOS CACHORROS ============ -->
+<section class="band cream" data-screen-label="Nossos cachorros">
+  <div class="wrap center">
+    <p class="eyebrow reveal">de quatro patas</p>
+    <h2 class="section-title reveal d1">Os nossos <em>cachorros</em></h2>
+    <p class="lead reveal d2">O nosso amor também é feito de patinhas.</p>
+    <div class="dog-grid">
+      <div class="trip-card reveal">
+        <image-slot id="dog-luck" style="width:100%;height:280px" placeholder="Nós com o Luck"></image-slot>
+        <div class="trip-body">
+          <p class="trip-place">Luck</p>
+          <span class="trip-when">pra sempre no coração 🐾</span>
+          <p>Meu companheiro, que partiu em 17 de maio de 2025. Você esteve do meu lado em cada lágrima daquele dia — e foi aí que eu senti, de novo, o tamanho do seu amor.</p>
+        </div>
+      </div>
+      <div class="trip-card reveal d1">
+        <image-slot id="dog-dasha" style="width:100%;height:280px" placeholder="A Dasha"></image-slot>
+        <div class="trip-body">
+          <p class="trip-place">Dasha</p>
+          <span class="trip-when">a nossa, em breve 🏡</span>
+          <p>A sua cachorrinha, que vai ser a nossa quando a gente morar junto. Mal posso esperar pra dividir a casa — e o sofá — com vocês duas.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIAGENS / SAUDADES ============ -->
+<section class="band blush" data-screen-label="Viagens e saudades">
+  <div class="wrap">
+    <div class="center">
+      <p class="eyebrow reveal">nossas aventuras</p>
+      <h2 class="section-title reveal d1">Pra onde a gente <em>foi</em> (e pra onde vamos)</h2>
+      <p class="lead reveal d2">Cada viagem com você vira a minha memória favorita — mesmo eu sendo péssimo de memória.</p>
+    </div>
+    <div class="trip-grid">
+      <div class="trip-card reveal">
+        <image-slot id="trip-guarajuba" style="width:100%;height:200px" placeholder="Guarajuba"></image-slot>
+        <div class="trip-body">
+          <p class="trip-place">Guarajuba</p>
+          <span class="trip-when">réveillon 2026</span>
+          <p>Nosso primeiro ano novo juntos. Começar mais um ano com você foi o melhor presente.</p>
+        </div>
+      </div>
+      <div class="trip-card reveal d1">
+        <div class="trip-illus-wrap">
+          <image-slot id="trip-ouropreto" style="width:100%;height:200px" placeholder="Foto ilustrativa de Ouro Preto"></image-slot>
+          <span class="illus-badge">📸 foto ilustrativa</span>
+        </div>
+        <div class="trip-body">
+          <p class="trip-place">Ouro Preto</p>
+          <span class="trip-when">meio de 2025</span>
+          <p>Nossa primeira viagem só nós dois. Eu, você e o mundo inteiro podendo esperar. <em class="trip-note">(a imagem aqui é só pra ilustrar — essa lembrança mora mesmo é na gente. 💗)</em></p>
+        </div>
+      </div>
+      <div class="trip-card reveal d2">
+        <image-slot id="trip-maquine" style="width:100%;height:200px" placeholder="Maquiné Park Hotel"></image-slot>
+        <div class="trip-body">
+          <p class="trip-place">Maquiné Park Hotel</p>
+          <span class="trip-when">2025 · com a família</span>
+          <p>Pertinho de BH, com a sua família. Me senti em casa do seu lado.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Saudades -->
+    <div class="saudade reveal-scale">
+      <div>
+        <h3>As saudades que provaram tudo</h3>
+        <p>Em fevereiro de 2025 eu fui pra Europa e ficamos <strong>2 semanas</strong> separados. Em fevereiro de 2026 você foi pra Disney e foram <strong>17 dias</strong> longe um do outro. A gente sofreu — porque a verdade é simples: não dá pra ficar longe de você.</p>
+        <p>E na volta da Disney teve o melhor reencontro de todos: o <strong>João</strong>, seu cunhado, se fantasiou de <strong>dinossauro</strong> pra te receber e à sua irmã no aeroporto. 🦖💗</p>
+      </div>
+      <div class="saudade-photos">
+        <div class="gphoto reveal"><image-slot id="europa" placeholder="Eu na Europa"></image-slot><span class="tag">eu na Europa ✈️</span></div>
+        <div class="gphoto reveal d1"><image-slot id="disney" placeholder="Você na Disney"></image-slot><span class="tag">você na Disney 🏰</span></div>
+        <div class="gphoto span2 reveal d2"><image-slot id="dino-aeroporto" placeholder="O dinossauro no aeroporto"></image-slot><span class="tag">o dino do aeroporto 🦖</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CARTINHAS ============ -->
+<section class="band cream" data-screen-label="Cartinhas">
+  <div class="wrap center">
+    <p class="eyebrow reveal">abre com carinho</p>
+    <h2 class="section-title reveal d1">Cartinhas <em>pra você</em></h2>
+    <p class="lead reveal d2">Clique em cada envelope pra abrir o que eu escrevi com o coração.</p>
+    <div class="letters">
+      <div class="envelope reveal" data-letter="1">
+        <div class="env-inner"></div>
+        <div class="env-pocket"></div>
+        <div class="env-flap"></div>
+        <div class="env-seal">♥</div>
+        <div class="env-hint">clique pra abrir</div>
+      </div>
+      <div class="envelope reveal d1" data-letter="2">
+        <div class="env-inner"></div>
+        <div class="env-pocket"></div>
+        <div class="env-flap"></div>
+        <div class="env-seal">♥</div>
+        <div class="env-hint">clique pra abrir</div>
+      </div>
+    </div>
+    <p class="lead reveal d2" style="margin-top:46px">E aqui ficam guardadas as suas, escritas de próprio punho:</p>
+    <div class="gallery" style="margin-top:24px">
+      <div class="gphoto col-6 reveal"><image-slot id="cartinha-foto-1" style="width:100%;height:380px" placeholder="Foto de uma cartinha da Julia"></image-slot><span class="tag">sua letra 💌</span></div>
+      <div class="gphoto col-6 reveal d1"><image-slot id="cartinha-foto-2" style="width:100%;height:380px" placeholder="Foto de uma cartinha da Julia"></image-slot><span class="tag">guardo pra sempre</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COISAS QUE AMO ============ -->
+<section class="band blush" data-screen-label="Coisas que amo nela">
+  <div class="wrap center">
+    <p class="eyebrow reveal">a lista que não acaba</p>
+    <h2 class="section-title reveal d1">Coisas que eu <em>amo</em> em você</h2>
+    <div class="love-list">
+      <div class="love-item reveal"><span class="ico">💝</span><p><b>Como você é dengosa</b> e se mostra vulnerável comigo — e como você precisa de mim do jeitinho que eu preciso de você.</p></div>
+      <div class="love-item reveal d1"><span class="ico">🌟</span><p><b>Sua dedicação</b> em realizar os seus sonhos — e como você sempre me inclui em cada um deles.</p></div>
+      <div class="love-item reveal d2"><span class="ico">🤍</span><p><b>O quanto você é fiel</b> e amorosa. Eu não poderia pedir parceira mais atenciosa e empática.</p></div>
+      <div class="love-item reveal"><span class="ico">👯</span><p><b>Você é uma amiga incrível</b> — pra Amanda, pra sua irmã, pra mim. Me impressiona como você cuida de quem ama.</p></div>
+      <div class="love-item reveal d1"><span class="ico">📺</span><p><b>Maratonar com você</b> — a gente terminou How I Met Your Mother inteirinha, e eu faria tudo de novo.</p></div>
+      <div class="love-item reveal d2"><span class="ico">🍔</span><p><b>Comer com você</b> — Madero, japonês, mexicano. Qualquer mesa fica melhor com você do outro lado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NÚMEROS ============ -->
+<section class="band cream" data-screen-label="Nossos números">
+  <div class="wrap center">
+    <p class="eyebrow reveal">a matemática do nosso amor</p>
+    <h2 class="section-title reveal d1">Nossos <em>números</em></h2>
+    <p class="lead reveal d2">Fui contar no nosso WhatsApp... e olha o que eu encontrei.</p>
+    <div class="num-grid">
+      <div class="num-card amo reveal-scale">
+        <div class="big" data-count="4900" data-format="comma">0</div><span class="plus" style="font-size:2rem;color:#fff;vertical-align:top;font-family:var(--font-serif)">+</span>
+        <div class="lab">"eu te amo"</div>
+        <p class="sub">e cada um deles foi de verdade. Faltam infinitos ainda. 💗</p>
+      </div>
+      <div class="num-card desc reveal-scale d1">
+        <div class="big" data-count="2150" data-format="comma">0</div><span class="plus" style="font-size:2rem;color:var(--rouge);vertical-align:top;font-family:var(--font-serif)">+</span>
+        <div class="lab">"desculpa"</div>
+        <p class="sub">porque a gente se importa demais um com o outro pra deixar passar.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FUTURO / PROMESSAS ============ -->
+<section class="band blush" data-screen-label="Planos e promessas">
+  <div class="wrap center">
+    <p class="eyebrow reveal">de mãos dadas pra frente</p>
+    <h2 class="section-title reveal d1">Nossos planos &amp; <em>promessas</em></h2>
+    <p class="lead reveal d2">Não prometo demais — mas com você é impossível não sonhar.</p>
+    <div class="promise-grid">
+      <div class="promise reveal"><div class="n">01</div><h4>Morar juntos 🏡</h4><p>Construir o nosso cantinho — com a Dasha no sofá. Sem você, sinto que estou perdendo tempo, e eu não quero mais isso.</p></div>
+      <div class="promise reveal d1"><div class="n">02</div><h4>Paris &amp; Mônaco 🗼</h4><p>Encher o mapa de alfinetes nossos. Quero ver o mundo de mãos dadas com você — começando por aí.</p></div>
+      <div class="promise reveal d2"><div class="n">03</div><h4>Nos casarmos 💍</h4><p>Dizer "sim" pra você na frente de todo mundo que a gente ama. Com você é impossível não sonhar com isso.</p></div>
+      <div class="promise reveal d3"><div class="n">04</div><h4>Adotar um cachorro 🐶</h4><p>Escolher juntos, como casal, mais um pra fazer parte da nossa família. Amor é melhor quando é dividido.</p></div>
+      <div class="promise reveal d4"><div class="n">05</div><h4>Te apoiar sempre 🌟</h4><p>Em cada sonho, cada conquista, cada dia difícil. Eu quero ser o seu lugar seguro pra vida toda.</p></div>
+      <div class="promise reveal d5"><div class="n">06</div><h4>Uma vida inteira 💞</h4><p>Fazer parte dos seus momentos em família, dos seus ciclos de amizade — de tudo. A vida toda, ao seu lado.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL — VALENTINE ============ -->
+<section class="valentine" data-screen-label="Will you be my valentine">
+  <div class="valentine-inner">
+    <div id="askScreen">
+      <p class="eyebrow reveal in">então, meu amor da minha vida...</p>
+      <p class="invite reveal in d1">Esse site inteiro foi pra te fazer uma pergunta — e, junto dela, um convite pra viver a vida inteira comigo:</p>
+      <h2 class="big-ask reveal in d2">Will you be my valentine?</h2>
+      <div class="btn-row">
+        <button class="btn-yes" id="btnYes">Sim, pra sempre 💗</button>
+        <button class="btn-no" id="btnNo">Não</button>
+      </div>
+    </div>
+    <div class="yes-screen" id="yesScreen">
+      <div class="heart-burst">💗</div>
+      <h2>Eu te amo, Juju</h2>
+      <p>Obrigado por ser a minha princesa, minha melhor amiga, o amor da minha vida. Agora é a gente, pra sempre — tchutchuquinha. 🥹</p>
+      <p class="signoff">para sempre seu, Lipinho 💕</p>
+    </div>
+  </div>
+</section>
+
+<div class="footer">
+  <p>feito com muito <span class="heart">♥</span> por mim, pra você — Juju.</p>
+</div>
+
+<!-- ============ LETTER MODAL ============ -->
+<div class="letter-modal" id="letterModal">
+  <div class="letter-paper">
+    <button class="letter-close" id="lmClose" aria-label="Fechar">✕</button>
+    <h3 id="lmTitle"></h3>
+    <div class="body" id="lmBody"></div>
+    <div class="sign" id="lmSign"></div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/heic2any@0.0.4/dist/heic2any.min.js"></script>
+<script src="image-slot.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
